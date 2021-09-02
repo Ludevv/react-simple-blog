@@ -6,6 +6,9 @@ import { NavigationBarProps } from '../types/types';
 const NavigationBar: React.FC<NavigationBarProps> = ( {name} ) => {
     return ( 
         <Box sx={{ 
+            position: "fixed",
+            top: "0",
+            left: "0",
             width: "96.5%", 
             height: "25px",
             bgcolor: 'primary.dark',
