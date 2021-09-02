@@ -59,7 +59,7 @@ const SignlePostPage: React.FC<RouteComponentProps<RouteParams>> = ({match}) => 
                 }
             />
             {post && <Post post={post}/>}
-            {comments ? <Comments comments={comments}/> : <p>No comments!</p>}
+            {comments && <Comments comments={comments}/>}
         </div>
      );
 }
