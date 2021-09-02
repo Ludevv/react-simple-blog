@@ -1,0 +1,15 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #303f9f;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-size: 15px;
+}

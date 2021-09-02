@@ -9,6 +9,7 @@ import { CommentItemProps, PostType, RouteParams } from '../types/types';
 import { API } from './Posts';
 
 
+
 const SignlePostPage: React.FC<RouteComponentProps<RouteParams>> = ({match}) => {
 
     const [post, setPost] = useState<PostType>();
@@ -19,7 +20,7 @@ const SignlePostPage: React.FC<RouteComponentProps<RouteParams>> = ({match}) => 
 
 	useEffect(() => {
 
-        //Fetch post
+    //Fetch post
 		fetch(API)
 		.then((response) => {
 			if (response.ok) return response;
@@ -32,7 +33,7 @@ const SignlePostPage: React.FC<RouteComponentProps<RouteParams>> = ({match}) => 
 		})
 		.catch((error) => console.log(error));
 
-        //Fetch comments
+    //Fetch comments
 		fetch(link)
 		.then((response) => {
 			if (response.ok) return response;
@@ -52,8 +53,8 @@ const SignlePostPage: React.FC<RouteComponentProps<RouteParams>> = ({match}) => 
             <NavigationBar 
                 name={
                     <>
-                        <Link to="/">Posts</Link>
-                        <span> / {post && post.title}</span>  
+                        <Link to="/">← Posts</Link>
+                        <span> {post && post.title}</span>  
                     </>
                 }
             />

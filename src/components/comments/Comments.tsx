@@ -1,3 +1,4 @@
+import { Box } from '@material-ui/core';
 import * as React from 'react';
 import { CommentsProps } from '../../types/types';
 import CommentItem from './CommentItem';
@@ -14,10 +15,14 @@ const Comments: React.FC<CommentsProps> = ( {comments} ) => {
         />
 )
     return ( 
-        <div>
-            <h5>Comments:</h5>
+        <Box sx={{
+            margin: "80px 150px",
+            fontFamily: "Roboto",
+            fontSize: "20px",
+        }}>
+            <h3>Comments:</h3>
             {showComments}
-        </div>
+        </Box>
      );
 }
  
